@@ -1,0 +1,29 @@
+{
+  "name": "chat-room",
+  "version": "1.0.0",
+  "description": "realtime chat app with room.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "serve": "nodemon server.js"
+  },
+  "keywords": [
+    "chat",
+    "socket.io"
+  ],
+  "author": "paper hsiao",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jquery": "^3.5.1",
+    "moment": "^2.29.1",
+    "socket.io": "^3.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "stylelint": "^13.10.0",
+    "stylelint-config-sass-guidelines": "^8.0.0",
+    "stylelint-config-standard": "^20.0.0"
+  }
+}

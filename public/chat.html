@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Room</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 1px black;
+      }
+
+      .chat-message {
+        margin-bottom: 50px;
+      }
+
+      .chat-message .message {
+        padding: 10px;
+        margin: 10px;
+        background-color: #c0d1ffab;
+        border-radius: 5px;
+      }
+
+      .chat-message .wrap {
+        height: 50vh;
+        overflow: scroll;
+      }
+
+      .chat-form {
+        position: fixed;
+        left: 0;
+        bottom: 0%;
+
+        width: 100%;
+        padding: 1%;
+
+        background-color: #84a0ef;
+      }
+
+      .message .meta {
+        font-weight: bold;
+        color: gray;
+      }
+
+      .message .meta span {
+        font-weight: normal;
+        color: black;
+      }
+
+      .message .text {
+        line-height: 1.35;
+        font-size: 20px;
+      }
+
+      #chat-form {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #chat-form input,
+      #chat-form button {
+        height: 3vh;
+      }
+
+      #chat-form input {
+        flex: 5;
+        margin-right: 2%;
+        padding: 1%;
+        border: none;
+        outline: none;
+        text-decoration: none;
+      }
+
+      #chat-form button {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="chat-message">
+        <div class="wrap">
+          <div class="message">
+            <p class="meta">Brad <span>9:12pm</span></p>
+            <p class="text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor ut
+              quod nemo, debitis deleniti animi nam, quasi ab, reprehenderit
+              ipsum nostrum facere. Modi exercitationem aut dicta maiores atque
+              reprehenderit voluptas.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="chat-form">
+        <div class="wrap">
+          <form id="chat-form">
+            <input
+              type="text"
+              id="msg"
+              placeholder="Enter Message"
+              required
+              autocomplete="off"
+            />
+            <button class="btn">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.6/qs.min.js"
+      integrity="sha512-3TmPrquYLaAsUmZKXRARTDC5siWhLAdBVqNo4dWpDABBtLU62AaoTaQJEvjxjExcZYurO6i1dnK85k8pPIBlRg=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./src/js/main.js"></script>
+  </body>
+</html>
